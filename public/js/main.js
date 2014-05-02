@@ -58,7 +58,7 @@ function update_display() {
     if (row * blocksize > height) { break; }  // Skip drawing offscreen pixels.
     for (col = 0; col < COLS; col++) {
       if (col * blocksize > width) { break; }  // Skip drawing offscreen pixels.
-      color = ~STATE_CUR[cell_index(col, row)] & 0xffffff;
+      color = STATE_CUR[cell_index(col, row)] & 0xffffff;
       for (brow = 0; brow < blocksize; brow++) {
         for (bcol = 0; bcol < blocksize; bcol++) {
           idx =
